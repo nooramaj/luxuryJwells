@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ORNÉ — Fine Jewelry, Handset</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="sparkle-canvas"></canvas>
+
+<header class="site-nav" id="siteNav">
+  <div class="nav-row">
+    <a href="#top" class="logo">ORN<em>É</em></a>
+    <ul class="nav-links">
+      <li><a href="#collection">Collections</a></li>
+      <li><a href="#craft">Craft</a></li>
+      <li><a href="#press">Journal</a></li>
+      <li><a href="#join">Atelier</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="search-wrap" id="searchWrap">
+        <button class="icon-btn search-trigger" id="searchTrigger" aria-label="Search" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>
+        </button>
+        <form class="search-flyout" id="searchForm" role="search">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search the collection…" aria-label="Search the collection" autocomplete="off" />
+        </form>
+      </div>
+      <button class="icon-btn cart-trigger" id="cartTrigger" aria-label="Bag" aria-haspopup="true" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-badge" id="cartBadge" hidden>0</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" role="switch" aria-checked="true" aria-label="Switch to light mode">
+        <span class="toggle-icon sun" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        </span>
+        <span class="toggle-icon moon" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 14.5a8.5 8.5 0 1 1-9-11 7 7 0 0 0 9 11Z"/></svg>
+        </span>
+        <span class="toggle-knob" aria-hidden="true"></span>
+      </button>
+      <a href="#join" class="nav-cta">Book a Fitting</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero hero-editorial">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+
+    <div class="hero-content reveal in">
+      <span class="eyebrow">New Collection — 2026</span>
+      <h1>Wear the<span><span class="italic">quiet</span> glint</span>of Luxury.</h1>
+      <p class="lede">ORNÉ pieces are cast, set and polished by hand in a twelve-person atelier — each ring, chain and stone chosen for the way it catches ordinary light.</p>
+      <div class="hero-actions">
+        <button class="hero-cta">Discover the Collection</button>
+        <a href="#craft" class="btn-text hero-subtext">See how it's made →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <div class="stat-strip reveal">
+    <div class="stat"><div class="num">18K</div><div class="label">Recycled Gold</div></div>
+    <div class="stat"><div class="num">100%</div><div class="label">Traceable Stones</div></div>
+    <div class="stat"><div class="num">40hrs</div><div class="label">Average Handset Time</div></div>
+    <div class="stat"><div class="num">∞</div><div class="label">Lifetime Repair</div></div>
+  </div>
+
+  <!-- ================= COLLECTION ================= -->
+  <section id="collection">
+    <div class="section-head reveal">
+      <h2>Four forms, one hand. Every piece begins as a sketch on the bench.</h2>
+      <p>Browse the current atelier release — hover any piece to inspect the setting under the loupe.</p>
+    </div>
+
+    <div class="scroller">
+
+      <article class="piece-card reveal">
+        <div class="piece-visual" data-loupe-photo="assets/ring.jpg" style="background-image:url('assets/ring.jpg')"></div>
+        <div class="piece-body">
+          <span class="piece-tag">Rings</span>
+          <h3>The Solene Band</h3>
+          <div class="piece-meta">
+            <span class="piece-price">$1,240</span>
+            <span class="piece-material">18K Gold · Champagne Diamond</span>
+          </div>
+          <button class="piece-add" data-id="solene-band" data-name="The Solene Band" data-price="1240" data-material="18K Gold · Champagne Diamond" data-image="assets/ring.jpg">Add to Bag</button>
+        </div>
+      </article>
+
+      <article class="piece-card reveal">
+        <div class="piece-visual" data-loupe-photo="assets/necklace.jpg" style="background-image:url('assets/necklace.jpg')"></div>
+        <div class="piece-body">
+          <span class="piece-tag">Necklaces</span>
+          <h3>The Marceline Chain</h3>
+          <div class="piece-meta">
+            <span class="piece-price">$980</span>
+            <span class="piece-material">Fine diamond</span>
+          </div>
+          <button class="piece-add" data-id="marceline-chain" data-name="The Marceline Chain" data-price="9800" data-material="Fine  diamond" data-image="assets/necklace.jpg">Add to Bag</button>
+        </div>
+      </article>
+
+      <article class="piece-card reveal">
+        <div class="piece-visual" data-loupe-photo="assets/earrings.jpg" style="background-image:url('assets/earrings.jpg')"></div>
+        <div class="piece-body">
+          <span class="piece-tag">Earrings</span>
+          <h3>The Odile Drop</h3>
+          <div class="piece-meta">
+            <span class="piece-price">$1500</span>
+            <span class="piece-material">18K Gold · Freshwater stone</span>
+          </div>
+          <button class="piece-add" data-id="odile-drop" data-name="The Odile Drop" data-price="1500" data-material="18K Gold · Freshwater stone" data-image="assets/earrings.jpg">Add to Bag</button>
+        </div>
+      </article>
+
+      <article class="piece-card reveal">
+        <div class="piece-visual" data-loupe-photo="assets/braclet.jpg" style="background-image:url('assets/braclet.jpg')"></div>
+        <div class="piece-body">
+          <span class="piece-tag">Bracelets</span>
+          <h3>The Isolde Cuff</h3>
+          <div class="piece-meta">
+            <span class="piece-price">$8600</span>
+            <span class="piece-material">Diamond</span>
+          </div>
+          <button class="piece-add" data-id="isolde-cuff" data-name="The Isolde Cuff" data-price="8600" data-material="Diamond" data-image="assets/braclet.jpg">Add to Bag</button>
+        </div>
+      </article>
+
+    </div>
+    <p class="search-empty" id="searchEmpty" hidden>No pieces match your search — try a material, category, or piece name.</p>
+  </section>
+
+  <!-- ================= CRAFT ================= -->
+  <section id="craft" class="craft">
+    <div class="craft-visual reveal" data-loupe-photo="assets/craft.jpg" style="background-image:url('assets/craft.jpg')"></div>
+    <div class="craft-copy">
+      <span class="eyebrow reveal">The Atelier</span>
+      <h2 class="reveal">Twelve hands. No two settings quite the same.</h2>
+      <p class="reveal">Every ORNÉ piece passes through the same bench where it was drawn — wax carved, cast in recycled gold, and hand-set under a jeweler's loupe so each stone sits a fraction of a millimetre from where it was placed on paper.</p>
+      <p class="reveal">We work in runs of twelve, never more, and retire a design once the run sells through. What's on the bench today won't be back.</p>
+      <div class="craft-list reveal">
+        <div class="craft-list-item"><span class="k">Materials</span><span class="v">Recycled 18K &amp; 14K gold, sterling silver</span></div>
+        <div class="craft-list-item"><span class="k">Stones</span><span class="v">Traceable diamonds, freshwater pearl, semi-precious</span></div>
+        <div class="craft-list-item"><span class="k">Process</span><span class="v">Wax carve → cast → hand-set → polish</span></div>
+        <div class="craft-list-item"><span class="k">Care</span><span class="v">Lifetime repair &amp; re-plating included</span></div>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- ================= PRESS MARQUEE ================= -->
+  <div id="press" class="press">
+    <div class="marquee">
+      <span>Vogue Accessories</span><span>·</span>
+      <span>Wallpaper*</span><span>·</span>
+      <span>The Jewellery Editor</span><span>·</span>
+      <span>Kinfolk</span><span>·</span>
+      <span>Cereal Magazine</span><span>·</span>
+      <span>Vogue Accessories</span><span>·</span>
+      <span>Wallpaper*</span><span>·</span>
+      <span>The Jewellery Editor</span><span>·</span>
+      <span>Kinfolk</span><span>·</span>
+      <span>Cereal Magazine</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ================= CTA ================= -->
+  <section id="join" class="cta-band">
+    <span class="eyebrow reveal">The Atelier List</span>
+    <h2 class="reveal">Be seated at the bench before each release sells through.</h2>
+    <p class="reveal">Twelve pieces per run. Members see the sketch first — usually three weeks before anyone else.</p>
+    <form class="cta-form reveal" onsubmit="event.preventDefault(); this.querySelector('button').textContent='You\'re on the list ✓';">
+      <input type="email" placeholder="your@email.com" required aria-label="Email address" />
+      <button type="submit">Join <span aria-hidden="true">→</span></button>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <div class="logo">ORN<em>É</em></div>
+      <p>Fine jewelry, cast and hand-set in small runs. Recycled gold, traceable stones, lifetime repair.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#collection">Rings</a></li>
+        <li><a href="#collection">Necklaces</a></li>
+        <li><a href="#collection">Earrings</a></li>
+        <li><a href="#collection">Bracelets</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Atelier</h4>
+      <ul>
+        <li><a href="#craft">Our Process</a></li>
+        <li><a href="#craft">Materials</a></li>
+        <li><a href="#press">Press</a></li>
+        <li><a href="#join">Book a Fitting</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Client Care</h4>
+      <ul>
+        <li><a href="#">Sizing Guide</a></li>
+        <li><a href="#">Repairs &amp; Care</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 ORNÉ Atelier. Portfolio concept — not a live store.</span>
+    <div class="socials">
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="Pinterest">Pinterest</a>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-panel" id="cartPanel" aria-hidden="true" aria-label="Shopping bag">
+  <div class="cart-panel-head">
+    <h3>Your Bag</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close bag">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-subtotal"><span>Subtotal</span><span id="cartSubtotal">$0</span></div>
+    <button class="cart-checkout" disabled title="Portfolio concept — checkout isn't wired up">Checkout — Concept Only</button>
+  </div>
+</aside>
+
+<script src="script.js"></script>
+
+</body>
+</html>
